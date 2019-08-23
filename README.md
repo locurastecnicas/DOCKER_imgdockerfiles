@@ -4,6 +4,8 @@ Este repositorio contiene los dockerfiles de las imagenes generadas y utilizadas
 
  * base_image.df - Dockerfile para la construccion de una imagen basica. Contiene comandos basicos y las
                    bibliotecas necesarias para su correcto funcionamiento.
+ * apache-activemq_image.df - Dockerfile para la construccion de una imagen con OpenJDK 1.8.0.222 y Apache ActiveMQ 5.15.9.
+                              Construida a partir de base_image.
  * ldap_image.df - Dockerfile para la construccion de una imagen que proporcione un servicio LDAP basado
  		   en OpenLDAP.
  * ldap_configurable_image.df - Dockerfile para la construccion de una imagen que proporcione un servicio LDAP basado
