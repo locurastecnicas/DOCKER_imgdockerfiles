@@ -1,0 +1,10 @@
+FROM scratch
+LABEL Name="Base image" \
+      Description="Base image for developing images for microservices." \
+      Builder="Eduardo Izaguirre Pazos" \
+      Contact="locurastecnicas@gmail.com" \
+      BuildFrom="scratch" \
+      BasedOn="CentOS 7.6.1810"
+USER 10000:10000
+ADD --chown=10000:10000 ./base_image /
+ENTRYPOINT ["/usr/bin/bash"]

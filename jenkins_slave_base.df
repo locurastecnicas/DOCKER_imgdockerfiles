@@ -1,0 +1,9 @@
+FROM base_image:latest
+ADD ./jenkins_slave_base /
+RUN ["/usr/bin/chown", "-R", "10000:10000", "/JENKINS"]
+VOLUME ["/JENKINS"]
+USER 10000:10000
+ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
+ENV JENKINS_HOME /JENKINS
+ENV LANG C.UTF-8
+ENTRYPOINT ["/JENKINS/jenkins.sh"]

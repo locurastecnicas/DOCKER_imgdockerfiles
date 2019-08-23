@@ -1,0 +1,4 @@
+FROM ldap_image:latest
+COPY ./scripts_ldap_image /ldap/scripts/
+ENTRYPOINT []
+CMD ["/ldap/scripts/ldapstart.sh"]

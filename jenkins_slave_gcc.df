@@ -1,0 +1,3 @@
+FROM jenkins_slave_base:latest
+ADD ./jenkins_slave_gcc /
+ENTRYPOINT ["/JENKINS/jenkins.sh"]
