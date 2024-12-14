@@ -1,0 +1,14 @@
+FROM python:3.13.1-alpine3.21
+LABEL Name="Gunicorn Server" \
+      Description="Gunicorn server for Python web applications" \
+      ExposedPorts="Port 8000/tcp" \
+      Builder="Eduardo Izaguirre Pazos" \
+      Contact="locurastecnicas@gmail.com" \
+      BuildFrom="python:3.13.1-alpine3.21"
+RUN /bin/mkdir /application
+RUN /bin/chown 1000:1000 /application
+RUN /bin/chmod 700 /application
+RUN /usr/local/bin/pip install --root-user-action ignore gunicorn
+EXPOSE 8000/tcp
+ENTRYPOINT ["/usr/local/bin/gunicorn", "-w 1", "-b 0.0.0.0:8000"]
+CMD [""]
