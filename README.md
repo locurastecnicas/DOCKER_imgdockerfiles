@@ -27,3 +27,4 @@ Este repositorio contiene los dockerfiles de las imagenes generadas y utilizadas
                         /WWW/private  -> Para almacenar la clave privada del certificado del servidor. El nombre
                                             debe ser PRIVATE_KEY.key.
 
+ * python_gunicorn
