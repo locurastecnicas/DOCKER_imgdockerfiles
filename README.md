@@ -30,7 +30,7 @@ Este repositorio contiene los dockerfiles de las imagenes generadas y utilizadas
  * python_gunicorn_server - Dockerfile para la construcción de una imagen basada en Python y Gunicorn como servidor
                             WSGI para aplicaciones web Python.
 
- * automind_stramlit.df - Dockerfile para la consutrucción de una imagen basada en Python y Streamlit para el desarrollo
+ * automind_streamlit.df - Dockerfile para la consutrucción de una imagen basada en Python y Streamlit para el desarrollo
                           de aplicaciones web. Para generar la imagen correctamente es necesario proporcionar el fichero
                           de configuracion config.toml para Streamlit.
 
