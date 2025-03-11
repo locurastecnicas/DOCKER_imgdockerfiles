@@ -1,6 +1,6 @@
 FROM python:3.13.2
 LABEL Name="Streamlit Framework" \
-      Description="Streamlit for Aut0mine web applications" \
+      Description="Streamlit for Aut0mind web applications" \
       ExposedPorts="Port 8000/tcp" \
       Builder="Eduardo Izaguirre Pazos" \
       Contact="locurastecnicas@gmail.com" \
