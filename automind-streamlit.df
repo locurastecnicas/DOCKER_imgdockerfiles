@@ -10,6 +10,7 @@ RUN /usr/sbin/groupadd -g 10000 automind && /usr/sbin/useradd -m -u 10000 -g 100
 RUN /usr/local/bin/pip install --root-user-action ignore streamlit
 EXPOSE 8000/tcp
 USER 10000
-RUN /bin/mkdir /home/automind/.streamlit && /bin/echo -e "[server]\nport = 8000\nenableCORS = true\n\n[browser]\ngatherUsageStats = false\n" > /home/automind/.streamlit/config.toml
+RUN /bin/mkdir /home/automind/.streamlit
+COPY --chown=automind:automind --chmod=600 config.toml /home/automind/.streamlit/config.toml
 ENTRYPOINT ["/usr/local/bin/streamlit", "run"]
 CMD [""]
